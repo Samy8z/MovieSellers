@@ -16,6 +16,9 @@ namespace Iut.Demo.Web.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
         public DateTime ReleaseDate { get; set; }
         public string? Genre { get; set; }
+        
+        [DataType(DataType.Currency)]
+        [Range(1, 100)]
         public decimal Price { get; set; }
 
         public string? Rating { get; set; }
